@@ -30,7 +30,7 @@ export default function About() {
               or emerging tools in AI—and I&apos;m always open to exploring new fields and challenges.
             </p>
 
-            <h3 className={styles.skillsHeading}>Core Technologies</h3>
+            <h3 className={styles.skillsHeading}>Core skills</h3>
           </div>
 
           <div className={styles.skillCategories}>
@@ -56,7 +56,7 @@ export default function About() {
         <div className={styles.imageWrapper}>
           <div className={styles.imageContainer}>
             <Image
-              src="/images/pic.jpg"
+              src="/images/pic3.jpg"
               alt="Suman Mandava"
               fill
               sizes="(max-width: 768px) 100vw, 300px"
