@@ -21,17 +21,8 @@ export default function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        Suman Mandava.
+        Suman Mandava
       </motion.h1>
-      
-      <motion.h2
-        className={styles.subtitle}
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        I build things for the web and beyond.
-      </motion.h2>
       
       <motion.p
         className={styles.description}
