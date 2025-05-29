@@ -1,45 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
 import styles from './Experience.module.css'
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState(0)
-
-  const jobs = [
-    {
-      company: 'UB Research',
-      role: 'Research Assistant',
-      date: 'October 2024 - Present',
-      points: [
-        'Developed multi-head Transformer models to recognize affective states (Engagement, Boredom, Confusion, Frustration) using Action Unit (AU) and Valence-Arousal (VA) features from the DAiSEE dataset',
-        'Achieved 78.08 test accuracy by training multihead classifiers across AU-only, VA-only, and fused VA+AU inputs',
-        'Implemented parallel Transformer encoders with late fusion to enhance performance in complex emotional states'
-      ]
-    },
-    {
-      company: 'Centum T&S',
-      role: 'Software Engineer Intern',
-      date: 'April 2024 - June 2024',
-      points: [
-        'Built responsive HMI applications for BMRCL and DMRC metro systems using protobuf, ZeroMQ, and web sockets, achieving 30% improvement in system responsiveness',
-        'Designed intuitive UI components with Handlebars.js and Node.js, enhancing driver control over console and audio configurations',
-        'Translated business requirements into detailed technical specifications, ensuring accurate implementation and timely delivery'
-      ]
-    },
-    {
-      company: 'HCLTech',
-      role: 'Software Engineer Intern',
-      date: 'January 2024 - March 2024',
-      points: [
-        'Built a full-stack Online Video Platform using React.js, Node.js, and MongoDB, improving system performance by 25% and reducing authentication latency by 15%',
-        'Engineered core features like JWT authentication, role-based user interfaces, and video streaming, boosting user engagement by 20%',
-        'Designed and tested RESTful APIs and UI components with Material-UI, achieving a 20% drop in bug occurrences through rigorous unit testing'
-      ]
-    }
-  ]
-
   return (
     <section id="experience" className={styles.experience}>
       <h2 className="section-heading">

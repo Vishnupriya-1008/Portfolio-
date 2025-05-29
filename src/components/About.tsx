@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import styles from './About.module.css'
 
@@ -55,10 +54,13 @@ const About = () => {
         </div>
 
         <div className={styles.imageContainer}>
-          <img
+          <Image
             src="/winter-profile.jpg"
             alt="Suman Mandava"
+            width={300}
+            height={300}
             className={styles.image}
+            priority
           />
         </div>
       </div>
