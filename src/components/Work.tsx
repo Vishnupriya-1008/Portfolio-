@@ -42,7 +42,7 @@ const Work = () => {
         transition={{ duration: 0.5 }}
       >
         <h2 className={styles.heading}>
-          <span className={styles.number}>03.</span> Some Things I've Built
+          <span className={styles.number}>03.</span> Some Things I&apos;ve Built
         </h2>
 
         <div className={styles.projectGrid}>
@@ -57,7 +57,11 @@ const Work = () => {
             >
               <div className={styles.projectContent}>
                 <p className={styles.projectOverline}>Featured Project</p>
-                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <h3 className={styles.projectTitle}>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    {project.title}
+                  </a>
+                </h3>
                 
                 <div className={styles.projectDescription}>
                   <p>{project.description}</p>

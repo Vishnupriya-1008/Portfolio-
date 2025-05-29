@@ -5,76 +5,63 @@ import Image from 'next/image'
 import styles from './About.module.css'
 
 const About = () => {
-  const skills = [
-    'JavaScript (ES6+)', 'TypeScript',
-    'React', 'Node.js',
-    'Python', 'Java',
-    'C++', 'MongoDB'
+  const technologies = [
+    'JavaScript (ES6+)',
+    'TypeScript',
+    'React',
+    'Node.js',
+    'Python',
+    'MongoDB',
+    'Express',
+    'Next.js'
   ]
 
   return (
-    <section id="about" className={styles.section}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className={styles.heading}>
-          <span className={styles.number}>01.</span> About Me
-        </h2>
-        
-        <div className={styles.content}>
-          <div className={styles.text}>
-            <p>
-              Hello! My name is Suman and I'm passionate about building innovative solutions 
-              that make a difference. My journey in computer science began during my 
-              undergraduate studies, where I discovered my love for problem-solving and 
-              creating efficient software solutions.
-            </p>
-            
-            <p>
-              Fast-forward to today, and I've had the privilege of working at{' '}
-              <span className={styles.highlight}>UB Research</span>,{' '}
-              <span className={styles.highlight}>Centum T&S</span>, and{' '}
-              <span className={styles.highlight}>HCLTech</span>. My main focus these 
-              days is building innovative solutions and conducting research in machine 
-              learning at the University at Buffalo.
-            </p>
+    <section id="about" className={styles.about}>
+      <h2 className="section-heading">
+        <span className={styles.number}>01.</span> About Me
+      </h2>
 
-            <p>
-              I'm currently working on developing multi-head Transformer models for 
-              affective state recognition and exploring blockchain applications in KYC systems.
-            </p>
+      <div className={styles.content}>
+        <div className={styles.text}>
+          <p>
+            Hello! I&apos;m Suman, and I enjoy creating things that live on the internet. 
+            My interest in web development started back in 2019 when I decided to try 
+            customizing Tumblr themes — turns out hacking together custom CSS taught me 
+            a lot about HTML & CSS!
+          </p>
 
-            <p>Here are a few technologies I've been working with recently:</p>
+          <p>
+            Fast-forward to today, and I&apos;ve had the privilege of working at a research lab, 
+            a tech corporation, and a software consultancy. My main focus these days is 
+            building accessible, inclusive products and digital experiences at University at 
+            Buffalo for a variety of clients.
+          </p>
 
-            <ul className={styles.skillList}>
-              {skills.map((skill) => (
-                <li key={skill} className={styles.skillItem}>
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p>
+            I also recently launched a course that covers everything you need to build a 
+            web app with the MERN stack.
+          </p>
 
-          <div className={styles.imageWrapper}>
-            <div className={styles.imageContainer}>
-              <Image
-                src="/winter-profile.jpg"
-                alt="Suman Mandava"
-                width={300}
-                height={300}
-                priority
-                quality={95}
-                className={styles.image}
-                style={{ objectFit: 'cover' }}
-              />
-              <div className={styles.imageBorder} />
-            </div>
-          </div>
+          <p>Here are a few technologies I&apos;ve been working with recently:</p>
+
+          <ul className={styles.skills}>
+            {technologies.map((tech) => (
+              <li key={tech} className={styles.skill}>
+                {tech}
+              </li>
+            ))}
+          </ul>
         </div>
-      </motion.div>
+
+        <div className={styles.imageContainer}>
+          <img
+            src="/winter-profile.jpg"
+            alt="Suman Mandava"
+            className={styles.image}
+          />
+        </div>
+      </div>
     </section>
   )
 }

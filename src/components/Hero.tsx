@@ -19,8 +19,8 @@ const Hero = () => {
         </h1>
 
         <p className={styles.description}>
-          I'm a software engineer specializing in building exceptional digital experiences. 
-          Currently, I'm focused on building accessible, human-centered products 
+          I&apos;m a software engineer specializing in building exceptional digital experiences. 
+          Currently, I&apos;m focused on building accessible, human-centered products 
           while pursuing my MS in Computer Science at University at Buffalo.
         </p>
 

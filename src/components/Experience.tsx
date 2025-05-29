@@ -41,41 +41,69 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className={styles.section}>
-      <h2 className={styles.heading}>02. Where I've Worked</h2>
-      
+    <section id="experience" className={styles.experience}>
+      <h2 className="section-heading">
+        <span className={styles.number}>02.</span> Where I&apos;ve Worked
+      </h2>
+
       <div className={styles.container}>
-        <div className={styles.tabs}>
-          {jobs.map((job, index) => (
-            <button
-              key={job.company}
-              className={`${styles.tab} ${activeTab === index ? styles.tabActive : ''}`}
-              onClick={() => setActiveTab(index)}
-            >
-              {job.company}
-            </button>
-          ))}
+        <div className={styles.company}>
+          <h3>Research Assistant</h3>
+          <p className={styles.companyName}>UB Research</p>
+          <p className={styles.duration}>October 2024 - Present</p>
         </div>
 
-        <motion.div
-          key={activeTab}
-          className={styles.content}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <h3 className={styles.role}>{jobs[activeTab].role}</h3>
-          <div className={styles.company}>{jobs[activeTab].company}</div>
-          <div className={styles.date}>{jobs[activeTab].date}</div>
-          
-          <ul className={styles.points}>
-            {jobs[activeTab].points.map((point, index) => (
-              <li key={index} className={styles.point}>
-                {point}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+        <ul className={styles.responsibilities}>
+          <li>
+            Developed multi-head Transformer models to recognize affective states (Engagement, Boredom, Confusion, Frustration) using Action Unit (AU) and Valence-Arousal (VA) features from the DAiSEE dataset
+          </li>
+          <li>
+            Achieved 78.08 test accuracy by training multihead classifiers across AU-only, VA-only, and fused VA+AU inputs
+          </li>
+          <li>
+            Implemented parallel Transformer encoders with late fusion to enhance performance in complex emotional states
+          </li>
+        </ul>
+      </div>
+
+      <div className={styles.container}>
+        <div className={styles.company}>
+          <h3>Software Engineer</h3>
+          <p className={styles.companyName}>Centum T&S</p>
+          <p className={styles.duration}>June 2021 - July 2023</p>
+        </div>
+
+        <ul className={styles.responsibilities}>
+          <li>
+            Led development of a real-time video streaming platform using WebRTC, achieving 40% reduction in latency
+          </li>
+          <li>
+            Implemented WebSocket-based chat features supporting 1000+ concurrent users with Redis pub/sub
+          </li>
+          <li>
+            Optimized MongoDB queries and implemented caching, reducing API response times by 60%
+          </li>
+        </ul>
+      </div>
+
+      <div className={styles.container}>
+        <div className={styles.company}>
+          <h3>Software Developer Intern</h3>
+          <p className={styles.companyName}>HCLTech</p>
+          <p className={styles.duration}>Jan 2021 - June 2021</p>
+        </div>
+
+        <ul className={styles.responsibilities}>
+          <li>
+            Developed and maintained RESTful APIs using Node.js and Express, integrated with MySQL database
+          </li>
+          <li>
+            Implemented user authentication and authorization using JWT tokens and bcrypt for password hashing
+          </li>
+          <li>
+            Created automated test suites using Jest, achieving 85% code coverage
+          </li>
+        </ul>
       </div>
     </section>
   )
