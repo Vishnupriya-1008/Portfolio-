@@ -6,26 +6,18 @@ import { FiGithub, FiExternalLink, FiFolder } from 'react-icons/fi'
 
 const projects = [
   {
-    title: 'Visual Question Answering System',
-    description: 'A VQA system for real-world accessibility using the VizWiz dataset. Integrated CLIP (ViT-B/32) vision-language encoder with a lightweight multi-head classifier to answer questions about images captured by blind or low-vision users, achieving 70% test accuracy.',
-    tech: ['Python', 'PyTorch', 'CLIP', 'Vision Transformer', 'Deep Learning'],
-    github: 'https://github.com/lakki12233/VQA_bot',
-    external: '#',
-    image: '/images/vqa.png'
-  },
-  {
     title: 'KYC Verification System',
-    description: 'A secure KYC verification system using blockchain technology. Features include document verification, face recognition, and digital signature validation. Built with React, Node.js, and Hyperledger Fabric.',
-    tech: ['React', 'Node.js', 'Hyperledger Fabric', 'MongoDB', 'AWS'],
-    github: 'https://github.com/lakki12233/kyc-verification',
+    description: 'A secure e-KYC platform integrating Ethereum blockchain and CP-ABE encryption. Achieved 98% data accuracy and reduced verification redundancy by 70%. Published in ICIMA-2023 (IEEE). Features include document verification, face recognition, and digital signature validation.',
+    tech: ['Ethereum', 'CP-ABE', 'Node.js', 'Express', 'Ganache', 'Solidity'],
+    github: 'https://github.com/lakki12233/KYC_BLOCKCHAIN',
     external: '#',
     image: '/images/kyc.png'
   },
   {
     title: 'MERN Online Video Platform',
-    description: 'A full-stack video streaming platform with real-time chat functionality. Implemented WebRTC for low-latency streaming and WebSocket for chat features supporting 1000+ concurrent users.',
-    tech: ['MongoDB', 'Express', 'React', 'Node.js', 'WebRTC', 'Socket.io'],
-    github: 'https://github.com/lakki12233/video-platform',
+    description: 'A full-stack video streaming platform with real-time chat functionality. Implemented JWT authentication, React Hooks for state management, and RESTful APIs. Features include admin dashboard with analytics, Firebase storage integration, and Google Dialogflow chatbot for user assistance.',
+    tech: ['React', 'Node.js', 'MongoDB', 'Firebase', 'JWT', 'Context API'],
+    github: 'https://github.com/lakki12233/MERN_OVP',
     external: '#',
     image: '/images/ovp.png'
   }
@@ -34,23 +26,23 @@ const projects = [
 const otherProjects = [
   {
     title: 'Road Lane Line Detection',
-    description: 'Developed a road lane line detection system using edge detection, Hough transform, image segmentation for accurate real-time lane identification, achieving 93.8% accuracy and processing at 0.18 s/frame. (IJFMR-2023) (Paper ID 6684)',
-    tech: ['Python', 'OpenCV', 'Machine Learning', 'Edge Detection', 'Hough Transform'],
-    github: 'https://github.com/lakki12233/Road-lane-line-detection',
-    external: '#'
-  },
-  {
-    title: 'Object Detection and Identification',
-    description: 'Real-time ML scans, identifies, and analyzes objects in digital and physical environments using OpenCV.',
-    tech: ['Python', 'OpenCV', 'Machine Learning', 'Object Detection', 'Computer Vision'],
-    github: 'https://github.com/lakki12233/Object_Dectection',
+    description: 'Computer vision system for detecting road lane lines with 93.8% accuracy using OpenCV and Python. Implemented advanced image processing techniques for real-time lane detection.',
+    tech: ['Python', 'OpenCV', 'NumPy', 'Computer Vision'],
+    github: '#',
     external: '#'
   },
   {
     title: 'Resume Screening Application',
-    description: 'Efficiently filters resumes based on key conditions which help in optimizing the recruitment process (IJNRD2308305).',
-    tech: ['React.js', 'Node.js', 'Machine Learning', 'NLP', 'Document Processing'],
-    github: 'https://github.com/lakki12233/Resume-Filtering-Application',
+    description: 'AI-powered resume screening tool using NLP and machine learning. Automates candidate evaluation by analyzing skills, experience, and qualifications.',
+    tech: ['Python', 'NLP', 'scikit-learn', 'NLTK'],
+    github: '#',
+    external: '#'
+  },
+  {
+    title: 'Object Detection System',
+    description: 'Real-time object detection system using YOLO and TensorFlow. Capable of identifying multiple objects in images and video streams with high accuracy.',
+    tech: ['Python', 'TensorFlow', 'YOLO', 'OpenCV'],
+    github: '#',
     external: '#'
   }
 ]
@@ -106,7 +98,6 @@ export default function Work() {
       </div>
 
       <h2 className={styles.moreProjectsHeading}>Other Noteworthy Projects</h2>
-      <a href="#" className={styles.archiveLink}>view the archive</a>
 
       <div className={styles.otherProjectsGrid}>
         {otherProjects.map((project, i) => (
