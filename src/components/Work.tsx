@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import Image from 'next/image'
 import styles from './Work.module.css'
@@ -35,69 +34,53 @@ const Work = () => {
 
   return (
     <section id="work" className={styles.section}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className={styles.heading}>
-          <span className={styles.number}>03.</span> Some Things I&apos;ve Built
-        </h2>
+      <h2 className="section-heading">
+        <span className={styles.number}>03.</span> Some Things I&apos;ve Built
+      </h2>
 
-        <div className={styles.projectGrid}>
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className={styles.projectCard}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className={styles.projectContent}>
-                <p className={styles.projectOverline}>Featured Project</p>
-                <h3 className={styles.projectTitle}>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    {project.title}
-                  </a>
-                </h3>
-                
-                <div className={styles.projectDescription}>
-                  <p>{project.description}</p>
-                </div>
-
-                <ul className={styles.projectTechList}>
-                  {project.tech.map((tech, i) => (
-                    <li key={i}>{tech}</li>
-                  ))}
-                </ul>
-
-                <div className={styles.projectLinks}>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    <FiGithub size={20} />
-                  </a>
-                  <a href={project.external} target="_blank" rel="noopener noreferrer">
-                    <FiExternalLink size={20} />
-                  </a>
-                </div>
+      <div className={styles.projectGrid}>
+        {projects.map((project, index) => (
+          <div key={index} className={styles.projectCard}>
+            <div className={styles.projectContent}>
+              <p className={styles.projectOverline}>Featured Project</p>
+              <h3 className={styles.projectTitle}>
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  {project.title}
+                </a>
+              </h3>
+              
+              <div className={styles.projectDescription}>
+                <p>{project.description}</p>
               </div>
 
-              <div className={styles.projectImage}>
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={400}
-                  quality={95}
-                  priority={index === 0}
-                  style={{ maxWidth: '100%', height: 'auto' }}
-                />
+              <ul className={styles.projectTechList}>
+                {project.tech.map((tech, i) => (
+                  <li key={i}>{tech}</li>
+                ))}
+              </ul>
+
+              <div className={styles.projectLinks}>
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <FiGithub size={20} />
+                </a>
+                <a href={project.external} target="_blank" rel="noopener noreferrer">
+                  <FiExternalLink size={20} />
+                </a>
               </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+            </div>
+
+            <div className={styles.projectImage}>
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={600}
+                height={400}
+                priority={index === 0}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   )
 }

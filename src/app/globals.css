@@ -1,12 +1,10 @@
 :root {
-  --mint: #64ffda;
-  --navy: #0b192f;
-  --navy-light: #112240;
-  --slate: #8892b0;
-  --slate-light: #a8b2d1;
-  --slate-lightest: #ccd6f6;
-  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
-  --font-sans: 'Inter', sans-serif;
+  --background: #0a192f;
+  --text-primary: #ccd6f6;
+  --text-secondary: #8892b0;
+  --accent: #64ffda;
+  --accent-10: rgba(100, 255, 218, 0.1);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 * {
@@ -20,11 +18,9 @@ html {
 }
 
 body {
-  background-color: var(--navy);
-  color: var(--slate);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -32,60 +28,47 @@ a {
   text-decoration: none;
 }
 
-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font: inherit;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--navy);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--mint);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  opacity: 0.8;
-}
-
-.section-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--slate-light);
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.section-heading::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background-color: var(--slate-light);
-  opacity: 0.2;
+main {
+  max-width: 1600px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 150px;
 }
 
 section {
-  padding: 100px 0;
+  margin: 100px auto;
+  max-width: 1000px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, 32px);
+  white-space: nowrap;
+}
+
+@media (max-width: 1080px) {
+  main {
+    padding: 0 100px;
+  }
 }
 
 @media (max-width: 768px) {
+  main {
+    padding: 0 50px;
+  }
+
   section {
-    padding: 80px 0;
+    margin: 80px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 25px;
   }
 }

@@ -1,13 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Roboto_Mono } from 'next/font/google'
+import { Inter } from 'next/font/google'
+import Navbar from '../components/Navbar'
+import SocialLinks from '../components/SocialLinks'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const robotoMono = Roboto_Mono({ subsets: ['latin'], variable: '--font-roboto-mono' })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Your Name - Portfolio',
-  description: 'Software Engineer & Web Developer',
+  title: 'Suman Mandava | Portfolio',
+  description: 'Software Engineer specializing in building exceptional digital experiences',
 }
 
 export default function RootLayout({
@@ -16,9 +17,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
-      <body className="bg-navy text-slate antialiased">
-        {children}
+    <html lang="en">
+      <body className={inter.className}>
+        <Navbar />
+        <SocialLinks />
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   )
