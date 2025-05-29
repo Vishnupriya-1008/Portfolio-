@@ -1,41 +1,58 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import styles from './Hero.module.css'
 
-const Hero = () => {
+export default function Hero() {
   return (
     <section className={styles.hero}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+      <motion.p
+        className={styles.greeting}
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className={styles.title}>
-          <span className={styles.greeting}>Hi, my name is</span>
-          <span className={styles.name}>Suman Mandava.</span>
-          <span className={styles.tagline}>I build things for the web.</span>
-        </h1>
-
-        <p className={styles.description}>
-          I&apos;m a software engineer specializing in building exceptional digital experiences. 
-          Currently, I&apos;m focused on building accessible, human-centered products 
-          while pursuing my MS in Computer Science at University at Buffalo.
-        </p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <Link href="#work" className={styles.cta}>
-            Check out my work!
-          </Link>
-        </motion.div>
+        Hi, my name is
+      </motion.p>
+      
+      <motion.h1
+        className={styles.title}
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        Suman Mandava.
+      </motion.h1>
+      
+      <motion.h2
+        className={styles.subtitle}
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        I build things for the web and beyond.
+      </motion.h2>
+      
+      <motion.p
+        className={styles.description}
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        I&apos;m a Computer Science graduate student at the University at Buffalo, specializing in building 
+        exceptional digital experiences. Currently focused on machine learning, computer vision, and 
+        developing accessible, human-centered applications while pursuing my MS in Computer Science.
+      </motion.p>
+      
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <a href="#work" className={styles.cta}>
+          Check out my work!
+        </a>
       </motion.div>
     </section>
   )
-}
-
-export default Hero 
+} 
