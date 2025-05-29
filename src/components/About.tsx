@@ -15,9 +15,9 @@ export default function About() {
           <div>
             <p>
               Hello, I&apos;m Suman Mandava, a software developer with experience in building web-based applications 
-              and a growing interest in machine learning and AI. I started in 2020 by developing a video streaming 
-              platform using the MERN stack, and I&apos;ve continued to work on projects and internships that involve 
-              creating efficient, user-focused systems.
+              and a growing interest in machine learning and AI. I began by developing a video streaming platform 
+              using the MERN stack and have continued to work on projects and internships that involve creating 
+              efficient, user-focused systems.
             </p>
 
             <p>
@@ -33,35 +33,36 @@ export default function About() {
             <h3 className={styles.skillsHeading}>Core Technologies</h3>
           </div>
 
-          <ul className={styles.skillCategories}>
-            <li>
+          <div className={styles.skillCategories}>
+            <div>
               <h4 className={styles.categoryTitle}>Development</h4>
               <ul className={styles.skills}>
-                <li className={styles.skill}>Full Stack (MERN)</li>
-                <li className={styles.skill}>Python & Java</li>
-                <li className={styles.skill}>Cloud & DevOps</li>
+                <li>Full Stack (MERN)</li>
+                <li>Python & Java</li>
+                <li>Cloud & DevOps</li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div>
               <h4 className={styles.categoryTitle}>AI & ML</h4>
               <ul className={styles.skills}>
-                <li className={styles.skill}>PyTorch & TensorFlow</li>
-                <li className={styles.skill}>Computer Vision</li>
-                <li className={styles.skill}>Transformer Models</li>
+                <li>PyTorch & TensorFlow</li>
+                <li>Computer Vision</li>
+                <li>Transformer Models</li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
-        <div className={styles.imageContainer}>
-          <Image
-            src="/winter-profile.jpg"
-            alt="Suman Mandava"
-            fill
-            sizes="(max-width: 768px) 100vw, 300px"
-            className={styles.image}
-            priority
-          />
+        <div className={styles.imageWrapper}>
+          <div className={styles.imageContainer}>
+            <Image
+              src="/images/me.jpg"
+              alt="Suman Mandava"
+              fill
+              sizes="(max-width: 768px) 100vw, 300px"
+              className={styles.image}
+            />
+          </div>
         </div>
       </div>
     </section>
