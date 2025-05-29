@@ -4,47 +4,47 @@ import { FiGithub, FiLinkedin, FiInstagram, FiMail } from 'react-icons/fi'
 import styles from './SocialLinks.module.css'
 
 const SocialLinks = () => {
-  const socialLinks = [
-    {
-      name: 'GitHub',
-      url: 'https://github.com/lakki12233',
-      icon: <FiGithub size={20} />
-    },
-    {
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/in/sumanmandava',
-      icon: <FiLinkedin size={20} />
-    },
-    {
-      name: 'Instagram',
-      url: 'https://instagram.com/suman._.03',
-      icon: <FiInstagram size={20} />
-    },
-    {
-      name: 'Email',
-      url: 'mailto:sumanman@buffalo.edu',
-      icon: <FiMail size={20} />
-    }
-  ]
-
   return (
-    <div className={styles.socialLinks}>
-      <ul className={styles.list}>
-        {socialLinks.map((link) => (
-          <li key={link.name}>
+    <>
+      <div className={styles.socialLinks}>
+        <ul className={styles.list}>
+          <li>
             <a
-              href={link.url}
+              href="https://github.com/lakki12233"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={link.name}
+              aria-label="GitHub"
             >
-              {link.icon}
+              <FiGithub size={20} />
             </a>
           </li>
-        ))}
-      </ul>
-      <div className={styles.line} />
-    </div>
+          <li>
+            <a
+              href="https://linkedin.com/in/sumanmandava"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin size={20} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/suman._.03"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FiInstagram size={20} />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div className={styles.email}>
+        <a href="mailto:sumanman@buffalo.edu">sumanman@buffalo.edu</a>
+      </div>
+    </>
   )
 }
 

@@ -3,68 +3,83 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 2rem;
+  padding: 0;
 }
 
-.title {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+.content {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 150px 0;
 }
 
-.greeting {
-  color: var(--mint);
+.content h1 {
+  margin: 0;
   font-family: var(--font-mono);
-  font-size: clamp(14px, 5vw, 16px);
+  font-size: 16px;
   font-weight: 400;
-  margin-bottom: 1rem;
+  color: var(--accent);
 }
 
 .name {
-  color: var(--slate-lightest);
+  margin: 30px 0;
+  color: var(--text-primary);
   font-size: clamp(40px, 8vw, 80px);
   font-weight: 600;
   line-height: 1.1;
 }
 
 .tagline {
-  color: var(--slate);
+  margin-top: 0;
+  color: var(--text-secondary);
   font-size: clamp(40px, 8vw, 80px);
   font-weight: 600;
   line-height: 1.1;
 }
 
 .description {
-  color: var(--slate);
-  font-size: clamp(16px, 5vw, 20px);
-  line-height: 1.7;
+  margin: 20px 0 0;
   max-width: 540px;
-  margin-bottom: 3rem;
+  color: var(--text-secondary);
+  font-size: 20px;
+  line-height: 1.6;
 }
 
-.cta {
+.button {
+  margin-top: 50px;
   display: inline-block;
-  color: var(--mint);
+  padding: 1.25rem 1.75rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
   font-family: var(--font-mono);
   font-size: 14px;
-  padding: 1.25rem 1.75rem;
-  border: 1px solid var(--mint);
-  border-radius: 4px;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  line-height: 1;
+  text-decoration: none;
+  color: var(--accent);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
-.cta:hover {
-  background-color: rgba(100, 255, 218, 0.1);
-  transform: translateY(-3px);
+.button:hover {
+  background-color: var(--accent-10);
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 0 1rem;
+  .content {
+    padding: 100px 0;
   }
-  
+
   .description {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 80px 0;
+  }
+
+  .description {
+    font-size: 14px;
   }
 } 
