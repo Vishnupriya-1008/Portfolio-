@@ -30,9 +30,9 @@ export default function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        I&apos;m a Computer Science graduate student at the University at Buffalo, specializing in building 
-        exceptional digital experiences. Currently focused on machine learning, computer vision, and 
-        developing accessible, human-centered applications while pursuing my MS in Computer Science.
+        I&apos;m a Computer Science graduate student at the University at Buffalo, currently focused on deep learning, 
+        machine learning, and core CS concepts like operating systems and software development. I enjoy creating web 
+        applications and building practical, human-centered digital experiences.
       </motion.p>
       
       <motion.div
