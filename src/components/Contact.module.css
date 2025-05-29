@@ -1,0 +1,89 @@
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.heading {
+  color: var(--mint);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.number {
+  color: var(--mint);
+  font-family: var(--font-mono);
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: bold;
+  color: var(--slate-light);
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  color: var(--slate);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactInfo {
+  margin-bottom: 2rem;
+  color: var(--slate);
+}
+
+.link {
+  color: var(--mint);
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--slate-light);
+}
+
+.buttonContainer {
+  margin-top: 3rem;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid var(--mint);
+  color: var(--mint);
+  padding: 1.25rem 1.75rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .text {
+    font-size: 1rem;
+  }
+} 
