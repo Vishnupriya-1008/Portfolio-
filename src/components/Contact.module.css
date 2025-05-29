@@ -89,9 +89,36 @@
 @media (max-width: 768px) {
   .contact {
     padding: 0 20px;
+    min-height: 80vh;
   }
 
   .description {
     font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .title {
+    font-size: clamp(35px, 5vw, 50px);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 0 15px;
+    min-height: 70vh;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .title {
+    font-size: clamp(30px, 5vw, 40px);
+  }
+
+  .button {
+    padding: 1rem 1.5rem;
+    font-size: 13px;
   }
 } 
