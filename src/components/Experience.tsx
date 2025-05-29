@@ -36,6 +36,17 @@ const jobs = [
       'Engineered core features like JWT authentication, role-based user interfaces, and video streaming, boosting user engagement by 20% and admin efficiency by 30%.',
       'Designed and tested RESTful APIs and UI components with Material-UI, achieving a 20% drop in bug occurrences through rigorous unit testing.'
     ]
+  },
+  {
+    company: 'L&T Technology Services',
+    url: 'https://www.ltts.com/',
+    title: 'React.js Developer Intern',
+    date: 'May 2023 - Jun 2023',
+    points: [
+      'Designed and implemented a Resume Shortlisting Application using React.js, improving efficiency in managing and evaluating job applicants resumes by 30%.',
+      'Developed responsive UI components and implemented efficient state management using React hooks and context API.',
+      'Collaborated with the HR team to understand requirements and implemented features for resume parsing and candidate evaluation.'
+    ]
   }
 ]
 
