@@ -4,21 +4,6 @@ import Image from 'next/image'
 import styles from './About.module.css'
 
 export default function About() {
-  const technologies = [
-    // Languages
-    'Java', 'C++', 'Python', 'JavaScript',
-    // Frontend & Frameworks
-    'React.js', 'Node.js', 'Express.js',
-    // UI Libraries
-    'Material UI', 'Bootstrap', 'Handlebars',
-    // Databases
-    'MongoDB', 'MySQL', 'PostgreSQL',
-    // Cloud & DevOps
-    'Docker', 'GCP', 'Firebase',
-    // Tools & Technologies
-    'REST APIs', 'WebSockets', 'JWT'
-  ]
-
   return (
     <section id="about" className={styles.about}>
       <h2 className={styles.heading}>
@@ -36,7 +21,7 @@ export default function About() {
             </p>
 
             <p>
-              Fast-forward to today, and I've had the privilege of working at{' '}
+              Fast-forward to today, and I&apos;ve had the privilege of working at{' '}
               <a href="#" className={styles.highlight}>a research lab</a>,{' '}
               <a href="#" className={styles.highlight}>a tech company</a>, and{' '}
               <a href="#" className={styles.highlight}>a software services firm</a>. 
