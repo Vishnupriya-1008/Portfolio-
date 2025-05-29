@@ -1,8 +1,13 @@
+'use client'
+
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import SocialLinks from '../components/SocialLinks'
+import Loader from '../components/Loader'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,14 +21,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+  const [isLoading, setIsLoading] = useState(isHome)
+
+  useEffect(() => {
+    if (isLoading) {
+      return
+    }
+  }, [isLoading])
+
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        <SocialLinks />
-        <main>
-          {children}
-        </main>
+    <html lang="en" className={inter.className}>
+      <body>
+        {isLoading && isHome ? (
+          <Loader />
+        ) : (
+          <>
+            <Navbar />
+            <SocialLinks />
+            <main>
+              {children}
+            </main>
+          </>
+        )}
       </body>
     </html>
   )
