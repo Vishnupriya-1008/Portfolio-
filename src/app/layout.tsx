@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
-      <body className="bg-navy text-slate antialiased">
+      <body suppressHydrationWarning={true}>
         {children}
       </body>
     </html>
