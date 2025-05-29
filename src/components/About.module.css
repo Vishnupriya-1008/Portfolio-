@@ -49,6 +49,13 @@
   line-height: 1.6;
 }
 
+.skillsHeading {
+  color: #ccd6f6;
+  font-size: 20px;
+  margin: 40px 0 20px;
+  font-weight: 600;
+}
+
 .highlight {
   color: #64ffda;
   text-decoration: none;
@@ -155,8 +162,9 @@
     display: block;
   }
 
-  .imageWrapper {
+  .imageContainer {
     margin: 50px auto 0;
+    max-width: 300px;
   }
 
   .heading::after {
@@ -169,7 +177,7 @@
 }
 
 @media (max-width: 480px) {
-  .imageWrapper {
+  .imageContainer {
     width: 100%;
   }
 

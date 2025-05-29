@@ -14,41 +14,69 @@ export default function About() {
         <div className={styles.content}>
           <div>
             <p>
-              Hello! My name is Suman and I enjoy building things that live on the internet. 
-              My interest in web development started back in 2020 when I decided to try creating 
-              a video streaming platform — turns out putting together a MERN stack application 
-              taught me a lot about full-stack development!
+              Hello, I&apos;m Suman Mandava, a software developer with experience in building web-based applications 
+              and a growing interest in machine learning and AI. I started in 2020 by developing a video streaming 
+              platform using the MERN stack, and I&apos;ve continued to work on projects and internships that involve 
+              creating efficient, user-focused systems.
             </p>
 
             <p>
-              Fast-forward to today, and I&apos;ve had the privilege of working at{' '}
-              <a href="#" className={styles.highlight}>a research lab</a>,{' '}
-              <a href="#" className={styles.highlight}>a tech company</a>, and{' '}
-              <a href="#" className={styles.highlight}>a software services firm</a>. 
-              My main focus these days is building accessible, inclusive products and digital experiences at{' '}
-              <a href="#" className={styles.highlight}>UB Research</a> while pursuing my MS in Computer Science.
+              Currently, my research at the University at Buffalo focuses on deep learning models for emotion 
+              recognition and vision-language tasks, where I explore Transformer architectures and CLIP-based encoders.
             </p>
 
-            <p>Here are my core areas of expertise:</p>
+            <p>
+              I enjoy learning and working across different areas—whether it&apos;s web technologies, intelligent systems, 
+              or emerging tools in AI—and I&apos;m always open to exploring new fields and challenges.
+            </p>
+
+            <h3 className={styles.skillsHeading}>Skills</h3>
           </div>
 
           <ul className={styles.skillCategories}>
             <li>
-              <h4 className={styles.categoryTitle}>Full Stack Development</h4>
+              <h4 className={styles.categoryTitle}>Languages</h4>
               <ul className={styles.skills}>
-                <li className={styles.skill}>MERN Stack (MongoDB, Express, React, Node.js)</li>
-                <li className={styles.skill}>RESTful APIs & WebSocket Integration</li>
-                <li className={styles.skill}>Cloud Services & DevOps</li>
-                <li className={styles.skill}>UI/UX Design Implementation</li>
+                <li className={styles.skill}>Java</li>
+                <li className={styles.skill}>C++</li>
+                <li className={styles.skill}>Python</li>
+                <li className={styles.skill}>HTML/CSS</li>
+                <li className={styles.skill}>JavaScript</li>
               </ul>
             </li>
             <li>
-              <h4 className={styles.categoryTitle}>Deep Learning & AI</h4>
+              <h4 className={styles.categoryTitle}>Frameworks</h4>
               <ul className={styles.skills}>
-                <li className={styles.skill}>Computer Vision & Image Processing</li>
-                <li className={styles.skill}>Transformer Models & CLIP</li>
+                <li className={styles.skill}>React.js</li>
+                <li className={styles.skill}>Node.js</li>
+                <li className={styles.skill}>Express.js</li>
+                <li className={styles.skill}>Material UI</li>
+                <li className={styles.skill}>Bootstrap</li>
+                <li className={styles.skill}>Context API</li>
+                <li className={styles.skill}>JSON Web Token</li>
+              </ul>
+            </li>
+            <li>
+              <h4 className={styles.categoryTitle}>Databases & DevOps</h4>
+              <ul className={styles.skills}>
+                <li className={styles.skill}>MySQL</li>
+                <li className={styles.skill}>MongoDB (NoSQL)</li>
+                <li className={styles.skill}>PostgreSQL</li>
+                <li className={styles.skill}>Git</li>
+                <li className={styles.skill}>Firebase</li>
+                <li className={styles.skill}>GCP</li>
+                <li className={styles.skill}>Docker</li>
+              </ul>
+            </li>
+            <li>
+              <h4 className={styles.categoryTitle}>Machine Learning & AI</h4>
+              <ul className={styles.skills}>
                 <li className={styles.skill}>PyTorch & TensorFlow</li>
-                <li className={styles.skill}>Machine Learning Operations</li>
+                <li className={styles.skill}>Transformer Models</li>
+                <li className={styles.skill}>CLIP & Vision-Language</li>
+                <li className={styles.skill}>Computer Vision</li>
+                <li className={styles.skill}>Multi-head Classification</li>
+                <li className={styles.skill}>Action Units & VQA</li>
               </ul>
             </li>
           </ul>
