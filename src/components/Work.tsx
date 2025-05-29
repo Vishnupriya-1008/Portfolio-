@@ -1,86 +1,61 @@
 'use client'
 
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
-import Image from 'next/image'
 import styles from './Work.module.css'
 
 const Work = () => {
-  const projects = [
+  const experiences = [
     {
-      title: 'KYC Verification System',
-      description: 'A blockchain-based KYC verification platform that ensures secure and efficient customer verification. Built with smart contracts for data integrity and CP-ABE encryption for privacy, achieving 98% accuracy in verification processes.',
-      tech: ['Blockchain', 'Solidity', 'React', 'Node.js', 'Smart Contracts'],
-      github: 'https://github.com/lakki12233/KYC_BLOCKCHAIN',
-      external: 'https://github.com/lakki12233/KYC_BLOCKCHAIN',
-      image: '/images/kyc.png'
+      title: 'Research Assistant',
+      company: 'UB Research',
+      date: 'October 2024 - Present',
+      points: [
+        'Developed multi-head Transformer models to recognize affective states (Engagement, Boredom, Confusion, Frustration) using Action Unit (AU) and Valence-Arousal (VA) features from the DAiSEE dataset',
+        'Achieved 78.08 test accuracy by training multihead classifiers across AU-only, VA-only, and fused VA+AU inputs',
+        'Implemented parallel Transformer encoders with late fusion to enhance performance in complex emotional states'
+      ]
     },
     {
-      title: 'MERN Online Video Platform',
-      description: 'A full-stack video platform built with MERN stack featuring JWT authentication, video streaming, admin dashboard, and AI-powered chatbot. Improved system performance by 25% and reduced authentication latency by 15%.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT'],
-      github: 'https://github.com/lakki12233/MERN_OVP',
-      external: 'https://github.com/lakki12233/MERN_OVP',
-      image: '/images/ovp.png'
+      title: 'Software Engineer',
+      company: 'Centum T&S',
+      date: 'June 2021 - July 2023',
+      points: [
+        'Led development of a real-time video streaming platform using WebRTC, achieving 40% reduction in latency',
+        'Implemented WebSocket-based chat features supporting 1000+ concurrent users with Redis pub/sub',
+        'Optimized MongoDB queries and implemented caching, reducing API response times by 60%'
+      ]
     },
     {
-      title: 'Visual Question Answering',
-      description: 'An advanced VQA system using CLIP and Transformer models to answer questions about real-world images. Integrated with object detection capabilities and handles challenging scenarios like blur and poor lighting.',
-      tech: ['Python', 'OpenCV', 'NumPy', 'Machine Learning'],
-      github: 'https://github.com/lakki12233/Object_Dectection',
-      external: 'https://github.com/lakki12233/Object_Dectection',
-      image: '/images/vqa.png'
+      title: 'Software Developer Intern',
+      company: 'HCLTech',
+      date: 'Jan 2021 - June 2021',
+      points: [
+        'Developed and maintained RESTful APIs using Node.js and Express, integrated with MySQL database',
+        'Implemented user authentication and authorization using JWT tokens and bcrypt for password hashing',
+        'Created automated test suites using Jest, achieving 85% code coverage'
+      ]
     }
   ]
 
   return (
-    <section id="work" className={styles.section}>
+    <section id="experience" className={styles.section}>
       <h2 className="section-heading">
-        <span className={styles.number}>03.</span> Some Things I&apos;ve Built
+        <span className={styles.number}>02.</span> Where I&apos;ve Worked
       </h2>
 
-      <div className={styles.projectGrid}>
-        {projects.map((project, index) => (
-          <div key={index} className={styles.projectCard}>
-            <div className={styles.projectContent}>
-              <p className={styles.projectOverline}>Featured Project</p>
-              <h3 className={styles.projectTitle}>
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  {project.title}
-                </a>
-              </h3>
-              
-              <div className={styles.projectDescription}>
-                <p>{project.description}</p>
-              </div>
-
-              <ul className={styles.projectTechList}>
-                {project.tech.map((tech, i) => (
-                  <li key={i}>{tech}</li>
-                ))}
-              </ul>
-
-              <div className={styles.projectLinks}>
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <FiGithub size={20} />
-                </a>
-                <a href={project.external} target="_blank" rel="noopener noreferrer">
-                  <FiExternalLink size={20} />
-                </a>
-              </div>
-            </div>
-
-            <div className={styles.projectImage}>
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={600}
-                height={400}
-                priority={index === 0}
-              />
-            </div>
+      {experiences.map((experience, index) => (
+        <div key={index} className={styles.experienceBlock}>
+          <div className={styles.header}>
+            <h3 className={styles.title}>{experience.title}</h3>
+            <p className={styles.company}>{experience.company}</p>
+            <p className={styles.date}>{experience.date}</p>
           </div>
-        ))}
-      </div>
+          <ul className={styles.points}>
+            {experience.points.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
   )
 }
