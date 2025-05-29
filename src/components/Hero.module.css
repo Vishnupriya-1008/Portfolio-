@@ -21,6 +21,9 @@
   font-weight: 600;
   margin: 0;
   line-height: 1.1;
+  white-space: normal;
+  word-wrap: break-word;
+  margin-bottom: 10px;
 }
 
 .subtitle {
@@ -63,7 +66,11 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+  }
+  
+  .title {
+    font-size: clamp(35px, 7vw, 60px);
   }
   
   .description {
