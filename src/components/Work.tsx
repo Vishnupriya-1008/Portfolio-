@@ -6,6 +6,14 @@ import { FiGithub, FiExternalLink, FiFolder } from 'react-icons/fi'
 
 const projects = [
   {
+    title: 'Visual Question Answering System',
+    description: 'A VQA system for real-world accessibility using the VizWiz dataset. Integrated CLIP (ViT-B/32) vision-language encoder with a lightweight multi-head classifier to answer questions about images captured by blind or low-vision users, achieving 70% test accuracy.',
+    tech: ['Python', 'PyTorch', 'CLIP', 'Vision Transformer', 'Deep Learning'],
+    github: 'https://github.com/lakki12233/VQA_bot',
+    external: '#',
+    image: '/images/vqa.png'
+  },
+  {
     title: 'KYC Verification System',
     description: 'A secure e-KYC platform integrating Ethereum blockchain and CP-ABE encryption. Achieved 98% data accuracy and reduced verification redundancy by 70%. Published in ICIMA-2023 (IEEE). Features include document verification, face recognition, and digital signature validation.',
     tech: ['Ethereum', 'CP-ABE', 'Node.js', 'Express', 'Ganache', 'Solidity'],
