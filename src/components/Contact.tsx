@@ -12,9 +12,9 @@ export default function Contact() {
       <h2 className={styles.title}>Get In Touch</h2>
 
       <p className={styles.description}>
-        Although I&apos;m not currently looking for any new opportunities, my inbox is
-        always open. Whether you have a question or just want to say hi, I&apos;ll try my
-        best to get back to you!
+        I&apos;m currently looking for new opportunities in software development and AI/ML roles. 
+        My inbox is always open for discussing potential positions, collaborations, or just to say hi! 
+        I&apos;ll get back to you as soon as possible.
       </p>
 
       <a
