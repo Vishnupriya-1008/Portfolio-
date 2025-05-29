@@ -29,51 +29,26 @@ export default function About() {
               <a href="#" className={styles.highlight}>UB Research</a> while pursuing my MS in Computer Science.
             </p>
 
-            <p>Here are some key technologies I work with:</p>
+            <p>Here are my core areas of expertise:</p>
           </div>
 
           <ul className={styles.skillCategories}>
             <li>
-              <h4 className={styles.categoryTitle}>Languages</h4>
+              <h4 className={styles.categoryTitle}>Full Stack Development</h4>
               <ul className={styles.skills}>
-                <li className={styles.skill}>Java</li>
-                <li className={styles.skill}>C++</li>
-                <li className={styles.skill}>Python</li>
-                <li className={styles.skill}>JavaScript</li>
-                <li className={styles.skill}>HTML/CSS</li>
+                <li className={styles.skill}>MERN Stack (MongoDB, Express, React, Node.js)</li>
+                <li className={styles.skill}>RESTful APIs & WebSocket Integration</li>
+                <li className={styles.skill}>Cloud Services & DevOps</li>
+                <li className={styles.skill}>UI/UX Design Implementation</li>
               </ul>
             </li>
             <li>
-              <h4 className={styles.categoryTitle}>Frameworks & Libraries</h4>
+              <h4 className={styles.categoryTitle}>Deep Learning & AI</h4>
               <ul className={styles.skills}>
-                <li className={styles.skill}>React.js</li>
-                <li className={styles.skill}>Node.js</li>
-                <li className={styles.skill}>Express.js</li>
-                <li className={styles.skill}>Material UI</li>
-                <li className={styles.skill}>Bootstrap</li>
-                <li className={styles.skill}>Context API</li>
-              </ul>
-            </li>
-            <li>
-              <h4 className={styles.categoryTitle}>Databases & DevOps</h4>
-              <ul className={styles.skills}>
-                <li className={styles.skill}>MongoDB</li>
-                <li className={styles.skill}>MySQL</li>
-                <li className={styles.skill}>PostgreSQL</li>
-                <li className={styles.skill}>Docker</li>
-                <li className={styles.skill}>Git</li>
-                <li className={styles.skill}>GCP</li>
-              </ul>
-            </li>
-            <li>
-              <h4 className={styles.categoryTitle}>Tools & Technologies</h4>
-              <ul className={styles.skills}>
-                <li className={styles.skill}>REST APIs</li>
-                <li className={styles.skill}>WebSockets</li>
-                <li className={styles.skill}>JWT</li>
-                <li className={styles.skill}>OAuth</li>
-                <li className={styles.skill}>Postman</li>
-                <li className={styles.skill}>Wireshark</li>
+                <li className={styles.skill}>Computer Vision & Image Processing</li>
+                <li className={styles.skill}>Transformer Models & CLIP</li>
+                <li className={styles.skill}>PyTorch & TensorFlow</li>
+                <li className={styles.skill}>Machine Learning Operations</li>
               </ul>
             </li>
           </ul>
