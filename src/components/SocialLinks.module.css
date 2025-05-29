@@ -1,88 +1,69 @@
-.socialLinks {
-  width: 40px;
+.container {
   position: fixed;
   bottom: 0;
   left: 40px;
-  right: auto;
-  z-index: 10;
-}
-
-.list {
   display: flex;
   flex-direction: column;
+  gap: 1.25rem;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  padding-bottom: 2rem;
 }
 
-.list li {
-  margin-bottom: 20px;
-}
-
-.list li:last-of-type {
-  margin-bottom: 30px;
-}
-
-.list li a {
-  padding: 10px;
-  color: var(--text-secondary);
-  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-}
-
-.list li a:hover {
-  color: var(--accent);
-  transform: translateY(-3px);
-}
-
-.list::after {
-  content: "";
+.container::after {
+  content: '';
   display: block;
   width: 1px;
   height: 90px;
   margin: 0 auto;
-  background-color: var(--text-secondary);
+  background-color: var(--slate);
+}
+
+.link {
+  color: var(--slate);
+  transition: all 0.2s;
+}
+
+.link:hover {
+  color: var(--mint);
+  transform: translateY(-3px);
 }
 
 .email {
   position: fixed;
   bottom: 0;
   right: 40px;
-  z-index: 10;
-}
-
-.email a {
   display: flex;
   flex-direction: column;
+  gap: 1.25rem;
   align-items: center;
-  position: relative;
-  margin: 20px auto;
-  padding: 10px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.1em;
+  padding-bottom: 2rem;
   writing-mode: vertical-rl;
-  color: var(--text-secondary);
-  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-}
-
-.email a:hover {
-  color: var(--accent);
-  transform: translateY(-3px);
 }
 
 .email::after {
-  content: "";
+  content: '';
   display: block;
   width: 1px;
   height: 90px;
   margin: 0 auto;
-  background-color: var(--text-secondary);
+  background-color: var(--slate);
+}
+
+.emailLink {
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+
+.emailLink:hover {
+  color: var(--mint);
+  transform: translateY(-3px);
 }
 
 @media (max-width: 1080px) {
-  .socialLinks {
+  .container {
     left: 20px;
   }
 
@@ -92,7 +73,7 @@
 }
 
 @media (max-width: 768px) {
-  .socialLinks,
+  .container,
   .email {
     display: none;
   }

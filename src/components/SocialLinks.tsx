@@ -1,49 +1,59 @@
 'use client'
 
-import { FiGithub, FiLinkedin, FiInstagram, FiMail } from 'react-icons/fi'
+import { motion } from 'framer-motion'
+import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi'
 import styles from './SocialLinks.module.css'
 
 const SocialLinks = () => {
+  const links = [
+    { icon: FiGithub, href: 'https://github.com/lakki12233' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/sumanmandava/' },
+    { icon: FiInstagram, href: 'https://www.instagram.com/suman._.03/' }
+  ]
+
   return (
     <>
-      <div className={styles.socialLinks}>
-        <ul className={styles.list}>
-          <li>
-            <a
-              href="https://github.com/lakki12233"
+      <motion.div
+        className={styles.container}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
+        {links.map((link, i) => {
+          const Icon = link.icon
+          return (
+            <motion.a
+              key={link.href}
+              href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub"
+              className={styles.link}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: i * 0.1 + 1 }}
             >
-              <FiGithub size={20} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/sumanmandava"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FiLinkedin size={20} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://instagram.com/suman._.03"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FiInstagram size={20} />
-            </a>
-          </li>
-        </ul>
-      </div>
+              <Icon size={20} />
+            </motion.a>
+          )
+        })}
+      </motion.div>
 
-      <div className={styles.email}>
-        <a href="mailto:sumanman@buffalo.edu">sumanman@buffalo.edu</a>
-      </div>
+      <motion.div
+        className={styles.email}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
+        <motion.a
+          href="mailto:sumanman@buffalo.edu"
+          className={styles.emailLink}
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
+        >
+          sumanman@buffalo.edu
+        </motion.a>
+      </motion.div>
     </>
   )
 }
