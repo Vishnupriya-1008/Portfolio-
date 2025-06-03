@@ -6,30 +6,34 @@ import { FiGithub, FiExternalLink, FiFolder } from 'react-icons/fi'
 
 const projects = [
   {
-    title: 'Visual Question Answering System',
-    description: 'A VQA system for real-world accessibility using the VizWiz dataset. Integrated CLIP (ViT-B/32) vision-language encoder with a lightweight multi-head classifier to answer questions about images captured by blind or low-vision users, achieving 70% test accuracy.',
-    tech: ['Python', 'PyTorch', 'CLIP', 'Vision Transformer', 'Deep Learning'],
-    github: 'https://github.com/lakki12233/VQA_bot',
+    title: 'AptitudeAI: Intelligent Screening Agent',
+    description:
+      'Built a custom adaptive interview environment using OpenAI Gym and PyTorch, tracking candidate accuracy, progress, and skill scores. Co-trained dual DQN agents for difficulty and domain selection using greedy exploration and entropy regularization. Achieved a 20% increase in cumulative reward over a static baseline.',
+    tech: ['Python', 'Reinforcement Learning', 'OpenAI Gym', 'PyTorch', 'DQN'],
+    github: 'https://github.com/lakki12233/AptitudeAI',
     external: '#',
-    image: '/images/vqa.png'
+    image: '/images/aptitudeai.png' // replace with your actual image if available
   },
   {
-    title: 'KYC Verification System',
-    description: 'A secure e-KYC platform integrating Ethereum blockchain and CP-ABE encryption. Achieved 98% data accuracy and reduced verification redundancy by 70%. Published in ICIMA-2023 (IEEE). Features include document verification, face recognition, and digital signature validation.',
-    tech: ['Ethereum', 'CP-ABE', 'Node.js', 'Express', 'Ganache', 'Solidity'],
-    github: 'https://github.com/lakki12233/KYC_BLOCKCHAIN',
+    title: 'Predicting Alzheimer’s Progression',
+    description:
+      'Transformed ADNI biomarkers into normalized inputs for unsupervised clustering and HMM-based temporal modeling. Predicted cognitive stages using RF and MLP (63% accuracy), visualized latent spaces with UMAP, and validated APOE4 ↔ ABETA causal links. Proposed privacy-preserving techniques like federated learning.',
+    tech: ['Python', 'Scikit-learn', 'PyTorch', 'UMAP', 'hmmlearn', 'NLME'],
+    github: 'https://github.com/lakki12233/AlzheimerPrediction',
     external: '#',
-    image: '/images/kyc.png'
+    image: '/images/alzheimer.png' // replace with your actual image if available
   },
   {
-    title: 'MERN Online Video Platform',
-    description: 'A full-stack video streaming platform with real-time chat functionality. Implemented JWT authentication, React Hooks for state management, and RESTful APIs. Features include admin dashboard with analytics, Firebase storage integration, and Google Dialogflow chatbot for user assistance.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Firebase', 'JWT', 'Context API'],
-    github: 'https://github.com/lakki12233/MERN_OVP',
+    title: 'Traffic Violation Detection System',
+    description:
+      'Developed a real-time computer vision pipeline using YOLOv5/v8 and DeepSORT for detecting vehicle, helmet, and license plate violations. Integrated pose estimation, OCR, and multi-object tracking to flag violations such as no helmet, overloading, and posture infractions.',
+    tech: ['YOLOv5', 'YOLOv8', 'DeepSORT', 'MediaPipe', 'EasyOCR', 'OpenCV', 'PyTorch'],
+    github: 'https://github.com/lakki12233/TrafficViolationSystem',
     external: '#',
-    image: '/images/ovp.png'
+    image: '/images/traffic.png' // replace with your actual image if available
   }
 ]
+
 
 const otherProjects = [
   {

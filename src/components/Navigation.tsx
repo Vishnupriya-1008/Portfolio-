@@ -14,7 +14,7 @@ const Navigation = () => {
         transition={{ duration: 0.5 }}
       >
         <Link href="/">
-          <div className={styles.logoHex}>SM</div>
+          <div className={styles.logoHex}>VP</div>
         </Link>
       </motion.div>
 
@@ -37,7 +37,7 @@ const Navigation = () => {
           <span className={styles.number}>04.</span>Contact
         </Link>
         <a 
-          href="/Suman_Mandava_Resume.pdf" 
+          href="/vishnu_resume.pdf" 
           target="_blank" 
           rel="noopener noreferrer" 
           className={styles.resumeButton}

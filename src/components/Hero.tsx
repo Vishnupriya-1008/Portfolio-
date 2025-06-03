@@ -21,7 +21,7 @@ export default function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        Suman Mandava
+       Vishnupriya Swaminathan
       </motion.h1>
       
       <motion.p
@@ -30,9 +30,7 @@ export default function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        I&apos;m a Computer Science graduate student at the University at Buffalo, currently focused on deep learning, 
-        machine learning, and core CS concepts like operating systems and software development. I enjoy creating web 
-        applications and building practical, human-centered digital experiences.
+        I&apos;m a Master’s student in AI at the University at Buffalo, with experience in full-stack development and machine learning, focused on building real-world AI solutions in healthcare, accessibility, and smart systems.
       </motion.p>
       
       <motion.div

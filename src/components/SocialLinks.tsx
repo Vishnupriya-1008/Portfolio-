@@ -6,9 +6,9 @@ import styles from './SocialLinks.module.css'
 
 const SocialLinks = () => {
   const links = [
-    { icon: FiGithub, href: 'https://github.com/lakki12233' },
-    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/sumanmandava/' },
-    { icon: FiInstagram, href: 'https://www.instagram.com/suman._.03/' }
+    { icon: FiGithub, href: 'https://github.com/Vishnupriya-1008' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/vishnupriya-swaminathan-b4517222a/' },
+    { icon: FiInstagram, href: 'https://www.instagram.com/vishnu_priya__10/' }
   ]
 
   return (
@@ -45,13 +45,13 @@ const SocialLinks = () => {
         transition={{ duration: 0.5, delay: 1 }}
       >
         <motion.a
-          href="mailto:sumanman@buffalo.edu"
+          href="mailto:swamina3@buffalo.edu"
           className={styles.emailLink}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.5 }}
         >
-          sumanman@buffalo.edu
+          swamina3@buffalo.edu
         </motion.a>
       </motion.div>
     </>

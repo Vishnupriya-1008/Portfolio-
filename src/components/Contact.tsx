@@ -12,13 +12,13 @@ export default function Contact() {
       <h2 className={styles.title}>Get In Touch</h2>
 
       <p className={styles.description}>
-        I&apos;m currently looking for new opportunities in software development and AI/ML roles. 
-        My inbox is always open for discussing potential positions, collaborations, or just to say hi! 
+        I&apos;m open to opportunities in AI, ML, and full-stack development. Feel free to reach out — I’m always up for a conversation!
+
         I&apos;ll get back to you as soon as possible.
       </p>
 
       <a
-        href="mailto:mandavasuman@gmail.com"
+        href="mailto:vishnupriyawp@gmail.com"
         className={styles.button}
         rel="noopener noreferrer"
         target="_blank"
