@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const robotoMono = Roboto_Mono({ subsets: ['latin'], variable: '--font-roboto-mono' })
 
 export const metadata: Metadata = {
-  title: 'Suman Mandava | Portfolio',
-  description: 'Software Engineer specializing in building exceptional digital experiences',
+  title: 'Vishnu Priya | Portfolio',
+  description: '',
 }
 
 export default function RootLayout({
